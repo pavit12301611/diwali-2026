@@ -1,17 +1,13 @@
-# Axon — Digital Workers for Mundane Workflows
+# Psdfolio Festival Greetings
 
-A single-page, full-viewport hero landing page for **Axon**, a platform that deploys digital workers for mundane workflows. Looping background video, glassy navigation pill, Instrument Serif display type and Inter body type over a deep-navy (`#1B133C`) palette. The Psdfolio circle mark ships as the site logo and favicon.
+A lightweight, responsive one-page greeting for Diwali and Bandi Chhor Divas from Psdfolio founder Pavit Singh. Both celebrations share one editorial page, with dedicated story sections and distinct generated WebP imagery.
 
-The previous Diwali / Bandi Chhor Divas greeting is preserved untouched at [`/greetings/`](public/greetings/index.html).
+Design refresh: Instrument Serif display type + Inter body, deep-navy `#1B133C` ink, a floating glass navigation pill, rounded soft-shadow buttons, and the Psdfolio circle mark as the site logo and favicon.
 
 ## Structure
 
-- `public/index.html` — the Axon hero (nav pill, YC badge, headline, subtitle, CTA, background video). No other sections or pages.
-- `public/index.css` — base reset (`body { font-family: 'Inter', sans-serif; color: #1B133C; }`) plus a hand-rolled utility layer that implements the Tailwind-style class names used in the markup (arbitrary values, `sm:`/`md:`/`lg:` and `hover:` variants included), the video scrim, and the logo-inspired floating glow dots.
-- `public/images/axon-logo.png` — site logo / favicon / og:image.
-- `public/greetings/` — the earlier festival greeting page and its assets (`/styles.css`, `/app.js`, `/images/*.webp`).
-
-Fonts (Instrument Serif regular + italic, Inter 400/500/600) load from Google Fonts and the hero background video streams from CloudFront; everything else is served locally with no frontend runtime dependencies.
+- `public/` — the festival greeting site (served at `/` locally and on the psdfolio Vercel project).
+- `axon/` — a separate Axon hero landing page (self-contained: `index.html`, `index.css`, `images/`). It is **not** part of this site's build and deploys only to its own Vercel project (`rootDirectory: axon`).
 
 ## Run locally
 
@@ -19,7 +15,7 @@ Fonts (Instrument Serif regular + italic, Inter 400/500/600) load from Google Fo
 npm start
 ```
 
-Open <http://localhost:3000>. The dependency-free Node.js server supports Brotli/gzip for text assets and long-lived caching for images.
+Open <http://localhost:3000>. The dependency-free Node.js server supports Brotli/gzip for text assets and long-lived caching for images. Google Fonts (Instrument Serif + Inter) load remotely.
 
 ## Build for Vercel
 
@@ -28,4 +24,4 @@ npm ci
 npm run build
 ```
 
-The build copies the static site into `dist/`.
+The build copies the static site into `dist/`. There are no frontend runtime dependencies beyond the Google Fonts request.
