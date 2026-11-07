@@ -11,6 +11,9 @@ const types = {
   '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.webp': 'image/webp',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.json': 'application/json; charset=utf-8',
@@ -41,10 +44,10 @@ const server = createServer((req, res) => {
   const immutable = /\.[a-f0-9]{8,}\./i.test(file);
   const headers = {
     'Content-Type': types[ext] || 'application/octet-stream',
-    'Cache-Control': ext === '.webp' || immutable ? 'public, max-age=31536000, immutable' : 'public, max-age=3600',
+    'Cache-Control': ext === '.webp' || ext === '.png' || immutable ? 'public, max-age=31536000, immutable' : 'public, max-age=3600',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'X-Frame-Options': 'SAMEORIGIN',
+    'Content-Security-Policy': "frame-ancestors 'self' https://*.e2b.app https://*.arena.ai",
     'Content-Length': stat.size,
   };
   if (encoding) {
