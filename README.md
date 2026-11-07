@@ -1,13 +1,14 @@
-# Psdfolio Festival Greetings
+# Psdfolio Festival Greetings — Diwali 2026
 
 A lightweight, responsive one-page greeting for Diwali and Bandi Chhor Divas from Psdfolio founder Pavit Singh. Both celebrations share one editorial page, with dedicated story sections and distinct generated WebP imagery.
 
-Design refresh: Instrument Serif display type + Inter body, deep-navy `#1B133C` ink, a floating glass navigation pill, rounded soft-shadow buttons, and the Psdfolio circle mark as the site logo and favicon.
+Company: **Psdfolio** — https://psdfolio.vercel.app · Owner: **Pavit Singh**
+
+Design: Instrument Serif display type + Inter body, deep-navy `#1B133C` ink, a floating glass navigation pill, rounded soft-shadow buttons, and the Psdfolio circle mark as the site logo and favicon.
 
 ## Structure
 
-- `public/` — the festival greeting site (served at `/` locally and on the psdfolio Vercel project).
-- `axon/` — a separate Axon hero landing page (self-contained: `index.html`, `index.css`, `images/`). It is **not** part of this site's build and deploys only to its own Vercel project (`rootDirectory: axon`).
+- `public/` — the festival greeting site (served at `/` locally and on Vercel).
 
 ## Run locally
 
