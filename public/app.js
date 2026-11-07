@@ -45,6 +45,12 @@ async function copyGreeting() {
 }
 
 document.querySelector('#copy-wish')?.addEventListener('click', copyGreeting);
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroVideo.removeAttribute('autoplay');
+  heroVideo.pause();
+}
+
 document.querySelector('#share-wish')?.addEventListener('click', async () => {
   if (navigator.share) {
     try {
