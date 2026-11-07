@@ -1,6 +1,6 @@
 # Psdfolio Festival Greetings
 
-A lightweight, responsive greeting site celebrating Diwali and Bandi Chhor Divas, signed by Psdfolio founder Pavit Singh.
+A lightweight, responsive, three-page greeting site with a home page plus dedicated Diwali and Bandi Chhor Divas greetings, signed by Psdfolio founder Pavit Singh. Large festival photography carries the title directly on image; mobile navigation uses normal vertical pages rather than a horizontal slider.
 
 ## Run locally
 

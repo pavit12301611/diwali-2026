@@ -25,7 +25,7 @@ function showToast(message) {
   toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2600);
 }
 
-const greeting = 'Happy Diwali and Bandi Chhor Divas! May your days be filled with light, hope, courage, compassion, and togetherness. Warm wishes from Pavit Singh and the Psdfolio family. Visit psdfolio.vercel.app';
+const greeting = document.body.dataset.greeting || 'Happy Diwali and Bandi Chhor Divas! May your days be filled with light, hope, courage, compassion, and togetherness. Warm wishes from Pavit Singh and the Psdfolio family. Visit psdfolio.vercel.app';
 
 async function copyGreeting() {
   try {
